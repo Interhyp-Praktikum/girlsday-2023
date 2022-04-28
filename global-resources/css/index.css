@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #2a1440;
+  --secondary-color: #ebeded;
+  --text-color-dark: rgb(30, 10, 45);
+  --text-color-light: #b0efff;
+  --color-green-dark: #8dfaaf;
+  --color-green-light: #a5fac0;
+  --color-blue-dark: #579eb0;
+  --color-blue-light: #e5f0f2;
+}
+html,
+body {
+  background-color: #3e5930;
+  color: var(--secondary-color);
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  margin: 2rem 0;
+  padding: 1rem 0;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 3rem;
+  text-align: center;
+  color: var(--color-blue-light);
+  -webkit-text-stroke: 1px var(--color-blue-light);
+  text-stroke: 1px var(--color-blue-light);
+  max-width: 1000px;
+}
+
+h2 {
+  border-bottom-width: 1px;
+}
+
+section {
+  padding-bottom: 2rem;
+}
+
+.page-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.stage {
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(87, 87, 87, 0.55),
+      rgba(87, 87, 87, 0.55)
+    ),
+    url("https://www.handelsblatt.com/images/interhyp-campus/26186480/2-formatOriginal.jpg");
+}
+
+.stage::before div {
+  margin: 0 0.5vh;
+  padding: 0;
+}
+
+.highlight {
+  color: var(--color-green-dark);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: stretch;
+}
+
+.agenda {
+  background: #576d6d;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.time {
+  flex: 1;
+}
+
+.event {
+  flex: 3;
+}
+
+.jobs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  background-color: #576d6d;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.dialog {
+  position: relative;
+  height: 60px;
+}
+
+.dialogs {
+  margin-bottom: 10px;
+  height: 100px;
+  position: relative;
+}
+
+.dialog-1 {
+  background-color: #759b9b;
+  border-radius: 10%;
+  width: 120px;
+  height: 100px;
+  padding: 15px;
+  margin-right: 7px;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+.left-point {
+  width: 0;
+  height: 0;
+  border-left: 2vh solid transparent;
+  border-right: 2vh solid transparent;
+  border-top: 10vh solid #759b9b;
+  position: absolute;
+  top: 120%;
+  left: -10%;
+  transform: rotate(60deg);
+}
+
+.job {
+  height: 100%;
+}
+
+.job-image {
+  width: 120px;
+  height: 120px;
+  display: block;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+}
+
+.job-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  color: var(--color-green-light);
+}
+
+.job-image.ux {
+  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+}
+
+.job-image.product {
+  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+}
+
+.job-image.software {
+  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+}
+
+/* jobs */
+.job-description {
+  font-size: 0.75rem;
+}
+
+.job-description * {
+  margin-bottom: 1rem;
+}
+
+.bewertung {
+  background-color: #759b9b;
+  margin-top: 25px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.sterne {
+  padding-left: 30px;
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.bild {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  position: relative;
+  background-image: url("https://cdn.pixabay.com/photo/2017/01/23/10/11/learn-2001940_960_720.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bild:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  box-shadow: inset 0px 0px 150px black;
+}
+
+button {
+  background-color: cadetblue;
+  padding: 10px;
+  margin-top: 10px;
+  color: white;
+  font-size: 22px;
+  font-family: "Dancing Script";
+  cursor: pointer;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
