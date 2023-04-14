@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Chettan+2&family=Calligraffitti&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;700&display=swap");
 :root {
-  --primary-color: #2a1440;
-  --secondary-color: #ebeded;
-  --text-color-dark: rgb(30, 10, 45);
-  --text-color-light: #b0efff;
-  --color-green-dark: #8dfaaf;
-  --color-green-light: #a5fac0;
-  --color-blue-dark: #579eb0;
-  --color-blue-light: #e5f0f2;
+  --text-color: #f9f1cc;
+  --primary-color: #ffd662;
+  --secondary-color: #ffb650;
+  --accent-color: #ff80bf;
+  --background-color: #031103;
+  --background-alternate-color: #062307;
 }
 html,
 body {
-  background-color: #3e5930;
-  color: var(--secondary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
   font-family: "Poppins", sans-serif;
 }
 
@@ -29,17 +27,21 @@ h2 {
 }
 
 h1 {
-  font-weight: normal;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 4rem;
   text-align: center;
-  color: var(--color-blue-light);
-  -webkit-text-stroke: 1px var(--color-blue-light);
-  text-stroke: 1px var(--color-blue-light);
   max-width: 1000px;
+  font-family: "Calligraffitti", cursive;
+  color: var(--text-color);
+  text-shadow: 2px 2px 0px var(--primary-color),
+    4px 4px 0px var(--secondary-color), 6px 6px 0px var(--accent-color);
+  line-height: 1.5;
+  letter-spacing: 3px;
 }
 
 h2 {
   border-bottom-width: 1px;
+  font-weight: normal;
 }
 
 section {
@@ -55,16 +57,14 @@ section {
 .stage {
   padding: 5rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  background-image: linear-gradient(
-      rgba(87, 87, 87, 0.55),
-      rgba(87, 87, 87, 0.55)
-    ),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35)),
     url("https://www.handelsblatt.com/images/interhyp-campus/26186480/2-formatOriginal.jpg");
 }
 
@@ -91,7 +91,7 @@ section {
 }
 
 .agenda {
-  background: #576d6d;
+  background: var(--background-alternate-color);
   padding: 1rem;
   border-radius: 4px;
 }
@@ -109,53 +109,28 @@ section {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+@media screen and (max-width: 1000px) {
+  .jobs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .jobs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 .card {
   display: grid;
   justify-items: center;
   align-content: start;
-  background-color: #576d6d;
+  background-color: var(--background-alternate-color);
   padding: 1rem;
-  border-radius: 4px;
+  border-radius: 10px;
 }
-
-.dialogs {
-  margin-bottom: 10px;
-  height: 100px;
-  position: relative;
-}
-
-.dialog-1 {
-  background-color: #759b9b;
-  border-radius: 10%;
-  width: 300px;
-  padding: 15px;
-  margin-right: 7px;
-  text-decoration: underline;
-  text-decoration-color: yellow;
-  position: relative;
-  font-family: sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  border-radius: 40px;
-  text-align: center;
-}
-
-.dialog-1:before {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-left: 24px solid #759b9b;
-  border-right: 12px solid transparent;
-  border-top: 12px solid #759b9b;
-  border-bottom: 20px solid transparent;
-  left: 32px;
-  bottom: -24px;
-}
-
 .job {
   height: 100%;
+  word-wrap: break-word;
 }
 
 .job-image {
@@ -169,10 +144,12 @@ section {
 }
 
 .job-title {
-  text-align: center;
   margin-bottom: 1.5rem;
-  font-weight: bold;
-  color: var(--color-green-light);
+  color: var(--secondary-color);
+}
+
+.job-image.service {
+  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
 }
 
 .job-image.ux {
@@ -196,52 +173,51 @@ section {
   margin-bottom: 1rem;
 }
 
-.bewertung {
-  background-color: #759b9b;
-  margin-top: 25px;
-  padding: 10px;
-  font-size: 20px;
-}
-
-.sterne {
-  padding-left: 30px;
-  padding-right: 20px;
-  display: inline-block;
-}
-
-.bild {
-  width: 300px;
-  height: 200px;
-  margin-top: 20px;
+.speech-bubble {
   position: relative;
-  background-image: url("https://cdn.pixabay.com/photo/2017/01/23/10/11/learn-2001940_960_720.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: var(--accent-color);
+  border-radius: 0.4em;
+  padding: 1rem;
+  color: black;
+  margin-bottom: 1rem;
+  flex: 1;
 }
 
-.bild:after {
+.speech-bubble:after {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   bottom: 0;
-  right: 0;
-  box-shadow: inset 0px 0px 150px black;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: var(--accent-color);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-bottom: -20px;
 }
 
 button {
-  background-color: cadetblue;
-  padding: 10px;
-  margin-top: 10px;
-  color: white;
-  font-size: 22px;
-  font-family: "Dancing Script";
-  cursor: pointer;
+  background: var(--accent-color);
+  padding: 1rem;
+  font-weight: normal;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
+
+button:hover {
+  background: var(--secondary-color);
+}
+
 a {
-  color: white;
   text-decoration: none;
+  color: black;
 }
-a:hover {
-  text-decoration: none;
+
+.experience {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
 }
