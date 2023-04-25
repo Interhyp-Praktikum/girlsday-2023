@@ -137,9 +137,9 @@ section {
   width: 120px;
   height: 120px;
   display: block;
-  border-radius: 50%;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   margin-bottom: 1rem;
 }
 
@@ -149,19 +149,19 @@ section {
 }
 
 .job-image.service {
-  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+  background-image: url(/global-resources/img/service.svg);
 }
 
 .job-image.ux {
-  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+  background-image: url(/global-resources/img/ux.svg);
 }
 
 .job-image.product {
-  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+  background-image: url(/global-resources/img/po.svg);
 }
 
 .job-image.software {
-  background-image: url(https://jobs.interhyp.de/uploads/1157/contents/headers/705be5c8-bcd4-4e36-85ac-0d46f9ffcc65/image-6197a010e0512-1637326864.jpeg);
+  background-image: url(/global-resources/img/code.svg);
 }
 
 /* jobs */
