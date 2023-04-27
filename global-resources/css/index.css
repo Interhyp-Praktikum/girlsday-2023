@@ -83,7 +83,7 @@ section {
   gap: 1rem;
 }
 
-.row {
+.roww {
   display: flex;
   flex-direction: row;
   gap: 1rem;
@@ -109,6 +109,7 @@ section {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+
 @media screen and (max-width: 1000px) {
   .jobs {
     grid-template-columns: repeat(2, 1fr);
@@ -123,14 +124,6 @@ section {
   }
 }
 
-.card2 {
-  display: grid;
-  justify-items: center;
-  align-content: start;
-  background-color: var(--background-alternate-color);
-  padding: 1rem;
-  border-radius: 10px;
-}
 .job {
   height: 100%;
   word-wrap: break-word;
@@ -140,7 +133,7 @@ section {
   width: 120px;
   height: 120px;
   display: block;
-  margin-bottom: 1rem;
+  margin: auto auto 1rem auto;
 }
 
 .job-title {
@@ -148,7 +141,6 @@ section {
   color: var(--secondary-color);
 }
 
-/* jobs */
 .job-description {
   font-size: 0.75rem;
 }
@@ -214,6 +206,7 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
+  justify-content: space-evenly;
 }
 
 .experience > * {
