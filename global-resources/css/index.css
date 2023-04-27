@@ -91,7 +91,7 @@ section {
 }
 
 .agenda {
-  background: var(--background-alternate-color);
+  background: #3789b3;
   padding: 1rem;
   border-radius: 4px;
 }
@@ -120,7 +120,7 @@ section {
   }
 }
 
-.card {
+.card2 {
   display: grid;
   justify-items: center;
   align-content: start;
@@ -179,6 +179,17 @@ section {
   margin-bottom: -19px;
 }
 
+.kastanien {
+  background: #54445e;
+  border-radius: 20px;
+  color: black;
+  padding: 15px;
+}
+
+.pic {
+  border-radius: 20px;
+}
+
 button {
   background: var(--accent-color);
   padding: 1rem;
@@ -201,4 +212,63 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+}
+
+.kachel {
+  background: #e03459;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.reihe {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.linie {
+  border-bottom: 1px solid white;
+  padding-bottom: 8px;
+}
+
+.faq {
+}
+
+.card {
+  background: #3789b3;
+  padding: 1rem;
+  border-radius: 5%;
+}
+
+.Profilbild {
+  border-radius: 50%;
+}
+.bild {
+  border-radius: 5%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.no-space {
+  justify-content: flex-start;
+}
+
+.yellow {
+  color: #f5d907;
+}
+
+.stars {
+  font-size: 30px;
 }
