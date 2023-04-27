@@ -113,6 +113,9 @@ section {
   .jobs {
     grid-template-columns: repeat(2, 1fr);
   }
+  .experience {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 500px) {
   .jobs {
@@ -209,9 +212,12 @@ a {
 
 .experience {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 1rem;
+}
+
+.experience > * {
+  flex: 1;
 }
 
 .kachel {
