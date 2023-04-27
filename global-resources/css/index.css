@@ -133,35 +133,16 @@ section {
   word-wrap: break-word;
 }
 
-.job-image {
+.job-image img {
   width: 120px;
   height: 120px;
   display: block;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   margin-bottom: 1rem;
 }
 
 .job-title {
   margin-bottom: 1.5rem;
   color: var(--secondary-color);
-}
-
-.job-image.service {
-  background-image: url(/global-resources/img/service.svg);
-}
-
-.job-image.ux {
-  background-image: url(/global-resources/img/ux.svg);
-}
-
-.job-image.product {
-  background-image: url(/global-resources/img/po.svg);
-}
-
-.job-image.software {
-  background-image: url(/global-resources/img/code.svg);
 }
 
 /* jobs */
